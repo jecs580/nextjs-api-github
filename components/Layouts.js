@@ -1,8 +1,11 @@
 import Navbar from './Navbar'
+import Head from 'next/head'
 const Layout =(props)=>(
     <>
         <Navbar/>
-        {props.children}
+        <main className="container py-4">
+            {props.children}
+        </main>
     </>
 )
 
