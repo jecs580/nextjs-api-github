@@ -1,5 +1,10 @@
+import Layouts from '../components/Layouts'
 const Index =()=>{
-    return (<h1>Hello world</h1>)
+    return (
+        <Layouts>
+            <h1>Hello World</h1>
+        </Layouts>
+    )
 }
 
 export default Index;
