@@ -11,6 +11,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
             <title> Mi Portafolio</title>
+            <meta name="description" content="Jorge Callisaya Sanchez Portfolio - website"/>
         </Head>
         <body>
           <Main />
