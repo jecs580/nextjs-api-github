@@ -1,5 +1,6 @@
 import Layouts from '../components/Layouts'
-import {skills, experiences} from '../profile'
+import Link from 'next/link'
+import {skills, experiences, proyects} from '../profile'
 const Index =()=>{
     return (
         <Layouts>
@@ -63,6 +64,41 @@ const Index =()=>{
                         </div>
                     </div>
                 </div>
+            </div>
+            {/* Portfolio */}
+            <div className="row">
+                <div className="col-md-12">
+                    <div className="card card-body bg-dark">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <h1 className="text-center text-light">Portfolio</h1>
+                            </div>
+                                {
+                                    proyects.map((pry,i)=>(
+                                    <div className="col-md-4 p-2" key={i}>
+                                        <div className="card h-100">
+                                            <div className="overflow">
+                                            <img src={pry.image} alt="" className="card-img-top"/>
+                                            </div>
+                                            <div className="card-body mb-3">
+                                                <h3>{pry.name}</h3>
+                                                <p>{pry.description}</p>
+                                                <a target="_blank" href={pry.link}>Know more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    ))
+                                }
+                        
+                        </div>
+                        <div className="text-center mt-4">
+                            <Link href="/portfolio">
+                            <a className="btn btn-outline-light">More Projects</a>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </Layouts>
     )
