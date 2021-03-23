@@ -1,6 +1,10 @@
 import Layouts from '../components/Layouts'
-const Github = ({user})=>{
+import Error from './_error'
+const Github = ({user, statusCode})=>{
     console.log(user);
+    if(statusCode){
+        return <Error statusCode={statusCode}/>
+    }
     return(
         <Layouts>
             <div className="row">
@@ -21,10 +25,11 @@ const Github = ({user})=>{
 export async function getServerSideProps() {
     const res = await fetch('https://api.github.com/users/jecs580');
     const data = await res.json();
-    console.log(data);
+    const statusCode = res.status>200 ? res.status: false;
     return {
         props:{
-            user:data
+            user:data,
+            statusCode
         }
     }
 }
