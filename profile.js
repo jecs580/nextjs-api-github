@@ -86,3 +86,26 @@ export const proyects = [
         link:"https://jecs580.github.io/Responsive-Design-1/"
     }
 ]
+export const posts =[
+    {
+        title: "React",
+        content:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
+        imageURL:
+          "https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/16097/react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png",
+      },
+      {
+        title: "Angular",
+        content:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
+        imageURL:
+          "https://miro.medium.com/max/2800/0*rDChHWWLHxxpXI0a.png",
+      },
+      {
+        title: "Nextjs",
+        content:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint excepturi ea explicabo. Illum suscipit illo, porro quisquam voluptatem",
+        imageURL:
+          "https://miro.medium.com/max/3920/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg",
+      },
+]

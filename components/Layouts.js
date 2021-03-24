@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 
 // Components
 import Navbar from './Navbar'
-const Layout =(props)=>{
+const Layout =({children, footer=true})=>{
     const router = useRouter();
     useEffect(()=>{
         const handlerChange = url=>{
@@ -22,15 +22,20 @@ const Layout =(props)=>{
     <>
         <Navbar/>
         <main className="container py-4">
-            {props.children}
+            {children}
         </main>
-        <footer className="bg-light text-dark text-center">
-            <div className="container p-4">
-                <h1>&copy; Jorge Callisaya Portfolio</h1>
-                <p>2000 -{new Date().getFullYear()}</p>
-                <p>All rights Reserverd.</p>
-            </div>
-        </footer>
+        {
+            footer && (
+                <footer className="bg-light text-dark text-center">
+                    <div className="container p-4">
+                        <h1>&copy; Jorge Callisaya Portfolio</h1>
+                        <p>2000 -{new Date().getFullYear()}</p>
+                        <p>All rights Reserverd.</p>
+                    </div>
+                </footer>
+            )
+        }
+        
     </>
     )
 }
